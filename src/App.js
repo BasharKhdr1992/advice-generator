@@ -66,14 +66,15 @@ const App = () => {
     };
   }, []);
   return (
-    <div className="main">
+    <div className="main" role="main">
+      <h1 className="main-title">Advice Generator</h1>
       <div className="advice-box">
         {state.isloading && <Loading />}
         {state.error && <p>{state.error}</p>}
         {!state.isloading && state.slip && (
           <div>
-            <h5>Advice #{state.slip.id.toString()}</h5>
-            <p className="quote">{state.slip.advice}</p>
+            <p className="advice-title">Advice #{state.slip.id.toString()}</p>
+            <blockquote className="quote">{`"${state.slip.advice}"`}</blockquote>
           </div>
         )}
         {width <= 1200 ? <DividerMobile /> : <DividerDesktop />}

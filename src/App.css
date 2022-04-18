@@ -6,10 +6,17 @@
 
 .main {
   display: flex;
+  flex-direction: column;
   background-color: hsl(218, 23%, 16%);
   justify-content: center;
   align-items: center;
-  height: 700px;
+  height: 100vh;
+}
+
+.main-title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(150, 100%, 66%);
 }
 
 .advice-box {
@@ -26,9 +33,11 @@
   background-color: hsl(217, 19%, 24%);
   box-shadow: 0px 2px 4px hsl(218, 23%, 16%);
 }
-h5 {
+.advice-title {
   margin-bottom: 20px;
   text-align: center;
+  font-size: 15px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
   color: hsl(150, 100%, 66%);
